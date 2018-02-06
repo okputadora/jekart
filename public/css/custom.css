@@ -6,6 +6,25 @@
 -----------------------------------------------------------------*/
 
 
-*{font-family: 'Megrim' }
+*{font-family: 'Megrim' !important}
 
 /* nav */
+.current{
+  color: #90cbb5;
+}
+
+h2{
+  color: white !important;
+  font-size: 17px !important;
+}
+.custom-theme-1{
+  color: white !important;
+  background-color: #292929 !important;
+  font-family: 'Megrim' !important;
+  font-size: 10px;
+  padding: 5px 10px 5px 10px !important;
+}
+
+.cover{
+  background-size: cover;
+}
