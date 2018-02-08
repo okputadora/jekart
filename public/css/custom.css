@@ -22,9 +22,43 @@ h2{
   background-color: #292929 !important;
   font-family: 'Megrim' !important;
   font-size: 10px;
-  padding: 5px 10px 5px 10px !important;
+  padding: 5px 160px 5px 160px !important;
 }
 
+.custom-header{
+  background-color: #292929 !important;
+  box-shadow: 2px 2px 2px 2px #181818;
+
+}
+
+.custom-title{
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* font-family: 'Megrim' !important; */
+  /* max-width: 400px; */
+  margin-right: 0 !important;
+}
+.custom-menu-item{
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.custom-menu-item:hover{
+  color: #717171 !important;
+}
 .cover{
   background-size: cover;
+  height: 70vh !important;
+}
+
+.fadeToBlack{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #292929;
+  z-index: 1;
+  opacity: 0;
 }

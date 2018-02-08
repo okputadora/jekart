@@ -2,7 +2,7 @@
 ============================================= -->
 <header id="header" class="transparent-header">
 
-  <div id="header-wrap">
+  <div id="header-wrap" class='custom-header'>
 
     <div class="container clearfix">
 
@@ -10,38 +10,41 @@
 
       <!-- Logo
       ============================================= -->
-      <div id="logo">
-        <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img  style='padding: 10px;' src="art_imgs/background/sf1.png" alt="Canvas Logo"></a>
-        <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+      <div id="logo" style="display: flex">
+        <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img  style='padding: 10px;' src="art_imgs/background/sf1-inverted.png" alt="Canvas Logo"></a>
+        <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="art_imgs/background/sf1-inverted.png" alt="Canvas Logo"></a>
+        <div class='custom-title'>
+          <div>Joseph Edgerton Krause</div>
+        </div>
       </div><!-- #logo end -->
 
       <!-- Primary Navigation
       ============================================= -->
-      <nav id="primary-menu" >
+      <nav id="primary-menu">
 
         <ul>
-          <li class="current"><a href="index.html"><div>Statement</div></a></li>
-          <li><a href="index.html"><div>Galleires</div></a>
+          <li class=""><a href="index.html"><div class='custom-menu-item'>Statement</div></a></li>
+          <li><a href="index.html"><div class='custom-menu-item'>Galleires</div></a>
             <ul>
               <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
             </ul>
           </li>
-          <li><a href="index.html"><div>Shop</div></a>
+          <li><a href="index.html"><div class='custom-menu-item'>Shop</div></a>
+            <ul>
+              <li><a href="index-corporate.html"><div class='custom-menu-item'>Home - Corporate</div></a></li>
+            </ul>
+          </li>
+          <li><a href="index.html"><div class='custom-menu-item'>Media</div></a>
             <ul>
               <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
             </ul>
           </li>
-          <li><a href="index.html"><div>Media</div></a>
+          <li><a href="index.html"><div class='custom-menu-item'>Events</div></a>
             <ul>
               <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
             </ul>
           </li>
-          <li><a href="index.html"><div>Events</div></a>
-            <ul>
-              <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
-            </ul>
-          </li>
-          <li><a href="index.html"><div>Contact</div></a></li>
+          <li><a href="index.html"><div class='custom-menu-item'>Contact</div></a></li>
 
         </ul>
 
