@@ -5,22 +5,12 @@
 	Overwriting Default Theme Styles for Better Hanlding Updates
 -----------------------------------------------------------------*/
 
-
-*{font-family: 'Megrim' !important}
+/* *{border: 1px solid red;} */
 
 /* nav */
-.current{
-  color: #90cbb5;
-}
-
-h2{
-  color: white !important;
-  font-size: 17px !important;
-}
 .custom-theme-1{
   color: white !important;
   background-color: #292929 !important;
-  font-family: 'Megrim' !important;
   font-size: 10px;
   padding: 5px 160px 5px 160px !important;
 }
@@ -28,7 +18,6 @@ h2{
 .custom-header{
   background-color: #292929 !important;
   box-shadow: 2px 2px 2px 2px #181818;
-
 }
 
 .custom-title{
@@ -37,21 +26,65 @@ h2{
   align-items: center;
   justify-content: center;
   color: white;
-  /* font-family: 'Megrim' !important; */
+  font-family: 'Megrim' !important;
   /* max-width: 400px; */
   margin-right: 0 !important;
+  transition: .2s;
+}
+
+.custom-menu-trigger{
+  left: auto !important;
+  right: 0 !important;
 }
 .custom-menu-item{
     color: white !important;
     opacity: 1 !important;
 }
 
+.custom-current{
+  color: #717171 !important;
+}
+
 .custom-menu-item:hover{
   color: #717171 !important;
 }
+.custom-sub-menu-item{
+  color:white !important;
+}
+.custom-sub-menu-item:hover{
+  color: #717171 !important;
+  background-color: black !important;
+}
+
+.custom-sub-menu{
+  background-color: black !important;
+  border: 0 !important;
+}
+
 .cover{
   background-size: cover;
   height: 70vh !important;
+}
+
+.custom-text{
+  font-weight: 900 !important;
+  font-size: 50px !important;
+  margin-top: 12vh !important;
+  width: 800px;
+  transition: .2s;
+}
+
+.custom-block-text{
+  max-width: 1150px;
+  margin: auto;
+  color: white !important;
+  font-size: 17px !important;
+}
+
+.right{
+  float: right;
+  text-align: right;
+  width: 300px;
 }
 
 .fadeToBlack{
@@ -61,4 +94,33 @@ h2{
   background: #292929;
   z-index: 1;
   opacity: 0;
+}
+
+@media screen and (max-width: 1200px){
+  .custom-title{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 991px){
+    .custom-sub-menu-item{
+      color: white !important;
+    }
+    .custom-text{
+      margin-top: 0 !important;
+      font-size: 35px !important;
+      width: 95%;
+    }
+    .custom-block-text{
+      margin: 0 !important;
+    }
+
+    .custom-theme-1{
+      padding: 2px !important;
+    }
+}
+@media screen and (max-width: 450px){
+  .custom-text{
+    font-size: 25px !important;
+  }
 }

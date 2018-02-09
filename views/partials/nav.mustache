@@ -6,7 +6,7 @@
 
     <div class="container clearfix">
 
-      <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+      <div class='custom-menu-trigger'id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
       <!-- Logo
       ============================================= -->
@@ -23,25 +23,30 @@
       <nav id="primary-menu">
 
         <ul>
-          <li class=""><a href="index.html"><div class='custom-menu-item'>Statement</div></a></li>
+          <li><a href="index.html"><div class='custom-menu-item custom-current'>Statement</div></a></li>
           <li><a href="index.html"><div class='custom-menu-item'>Galleires</div></a>
-            <ul>
-              <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
+            <ul class='custom-sub-menu'>
+              {{# galleries}}
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>{{title}}</div></a></li>
+              {{/ galleries}}
             </ul>
           </li>
           <li><a href="index.html"><div class='custom-menu-item'>Shop</div></a>
-            <ul>
-              <li><a href="index-corporate.html"><div class='custom-menu-item'>Home - Corporate</div></a></li>
+            <ul class='custom-sub-menu'>
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>Prints</div></a></li>
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>Art</div></a></li>
             </ul>
           </li>
           <li><a href="index.html"><div class='custom-menu-item'>Media</div></a>
-            <ul>
-              <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
+            <ul class='custom-sub-menu'>
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>Photography</div></a></li>
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>Video</div></a></li>
             </ul>
           </li>
           <li><a href="index.html"><div class='custom-menu-item'>Events</div></a>
-            <ul>
-              <li><a href="index-corporate.html"><div>Home - Corporate</div></a></li>
+            <ul class='custom-sub-menu'>
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>Upcoming</div></a></li>
+              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>Past</div></a></li>
             </ul>
           </li>
           <li><a href="index.html"><div class='custom-menu-item'>Contact</div></a></li>
