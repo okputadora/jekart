@@ -124,3 +124,60 @@
     font-size: 25px !important;
   }
 }
+
+/*  GALLERies */
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.gallery{
+  position: relative;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.custom-background{
+  background: url('../art_imgs/background/main1.png');
+  background-attachment:fixed;
+}
+
+.gallery-image{
+  height: 300px;
+}
+
+.gallery-description{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  transition: .2s ease-in-out;
+}
+
+.gallery-description:hover{
+  opacity: .8;
+}
+
+@media screen and (max-width: 667px){
+  .flex-container{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery{height:250px;}
+  .gallery-image{
+    height: 250px;
+  }
+
+  .gallery-description{
+    opacity: .7
+  }
+}

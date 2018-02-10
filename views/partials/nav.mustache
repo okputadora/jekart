@@ -11,8 +11,8 @@
       <!-- Logo
       ============================================= -->
       <div id="logo" style="display: flex">
-        <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img  style='padding: 10px;' src="art_imgs/background/sf1-inverted.png" alt="Canvas Logo"></a>
-        <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="art_imgs/background/sf1-inverted.png" alt="Canvas Logo"></a>
+        <a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img  style='padding: 10px;' src="art_imgs/background/sf1-inverted.png" alt="Canvas Logo"></a>
+        <a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="art_imgs/background/sf1-inverted.png" alt="Canvas Logo"></a>
         <div class='custom-title'>
           <div>Joseph Edgerton Krause</div>
         </div>
@@ -23,11 +23,11 @@
       <nav id="primary-menu">
 
         <ul>
-          <li><a href="index.html"><div class='custom-menu-item custom-current'>Statement</div></a></li>
-          <li><a href="index.html"><div class='custom-menu-item'>Galleires</div></a>
+          <li><a href="/index"><div class='custom-menu-item custom-current'>Statement</div></a></li>
+          <li><a href="/gallery"><div class='custom-menu-item'>Galleires</div></a>
             <ul class='custom-sub-menu'>
               {{# galleries}}
-              <li><a class='custom-sub-menu-item' href="index-corporate.html"><div>{{title}}</div></a></li>
+              <li><a class='custom-sub-menu-item' href="/galleries/{{name}}"><div>{{name}}</div></a></li>
               {{/ galleries}}
             </ul>
           </li>
