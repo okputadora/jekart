@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{>head }}
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix" style>
+
+		<!-- Header
+		============================================= -->
+		{{>nav }}
+		<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu" class="no-sticky">
+			<div id="page-menu-wrap">
+				<div class="container clearfix">
+					<div class="menu-title"><span>galleries</span></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap custom-background">
+
+				<div class="container clearfix">
+
+					<div class="clear"></div>
+
+					<!-- Portfolio Items
+					============================================= -->
+				<div id="galleries" class="flex-container">
+					{{#galleries}}
+					<a href='/gallery/{{name}}'><div id="gallery-{{name}}" class="gallery">
+						<img src="/art_imgs/gal_covers/{{imagePath}}" class="gallery-image"/>
+						<div class="gallery-description">
+							<div>{{name}}</div>
+						</div>
+					</div></a>
+					{{/galleries}}
+				</div>
+
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		{{>footer}}
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+</body>
+</html>

@@ -178,6 +178,16 @@
   }
 
   .gallery-description{
-    opacity: .7
+    opacity: .7;
   }
+}
+
+.custom-image-title{
+  color: white !important;
+  opacity: 0;
+  transition: .2s;
+}
+
+.custom-hover:hover .custom-image-title{
+  opacity: 1;
 }
