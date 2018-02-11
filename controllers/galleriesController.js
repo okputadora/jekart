@@ -1,4 +1,4 @@
-var Galleries = require('..models/galleries')
+var Galleries = require('../models/galleries')
 var Promise = require('bluebird')
 
 module.exports = {

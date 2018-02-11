@@ -1,9 +1,9 @@
-var eventsController = require('eventsController')
-var galleriesController = require('galleriesController')
-var galleryController = require('galleryController')
+var eventsController = require('../controllers/eventsController')
+var galleriesController = require('../controllers/galleriesController')
+var artController = require('../controllers/artController')
 
 module.exports = {
   events: eventsController,
   galleries: galleriesController,
-  gallery: galleryController
+  art: artController
 }

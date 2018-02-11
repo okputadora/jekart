@@ -4,10 +4,21 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var dotenv = require('dotenv');
 
+
+mongoose.connect('mongodb://localhost/jekart', function(err, res){
+  if (err){
+    console.log('DB CONNECTION FAILED: '+err)
+  }
+  else{
+    console.log('DB CONNECTION SUCCESS: '+ 'mongodb://localhost/jekart')
+  }
+})
 var app = express();
 
 // view engine setup

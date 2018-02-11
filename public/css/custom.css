@@ -61,6 +61,10 @@
   border: 0 !important;
 }
 
+.custom-page-banner{
+  background: #25bdc7d9 !important;
+}
+
 .cover{
   background-size: cover;
   height: 70vh !important;

@@ -1,6 +1,8 @@
 var express = require('express')
 var router = express.Router()
 var controllers = require('../controllers')
+var artCollection = require('../art.js')
+
 
 router.get('/:resource', function(req, res, next){
 	var resource = req.params.resource;
@@ -51,6 +53,10 @@ router.get('/:resource/:id', function(req, res, next){
 	})
 })
 router.post('/:resource', function(req, res, next){
+	var resource = req.params.resource;
+	if (resource == 'buildDb'){
+
+	}
 	var resource = req.params.resource
 	var controller = controllers[resource]
 	if (controller == null){
