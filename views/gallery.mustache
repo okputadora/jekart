@@ -16,7 +16,7 @@
 		<div id="page-menu" class="no-sticky">
 			<div id="page-menu-wrap" class='custom-page-banner'>
 				<div class="container clearfix">
-					<div class="menu-title">gallery <span>{{galleryName}}</span></div>
+					<div class="menu-title">gallery <span>{{gallery[0].galleryName}}</span></div>
 				</div>
 			</div>
 		</div>
@@ -36,10 +36,10 @@
   							<div class="portfolio-image">
   								<a href="portfolio-single.html">
                     <!-- gal covers eventually needs to be changed -->
-  									<img src="/art_imgs/gal_covers/{{imagePath}}" alt="Open Imagination">
+  									<img src="/art_imgs/{{galleryName}}/{{imagePath}}" alt="Open Imagination">
   								</a>
   								<div class="portfolio-overlay">
-  									<a href="/art_imgs/gal_covers/{{imagePath}}" class="center-icon" data-lightbox="image" title="{{name}}"><i class="icon-line-plus"></i></a>
+  									<a href="/art_imgs/{{galleryName}}/{{imagePath}}" class="center-icon" data-lightbox="image" title="{{name}}"><i class="icon-line-plus"></i></a>
   								</div>
   							</div>
   							<div class="portfolio-desc">
@@ -66,12 +66,12 @@
 
 	<!-- External JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="/js/functions.js"></script>
 
 </body>
 </html>
