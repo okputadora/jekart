@@ -19,14 +19,14 @@ module.exports = {
       })
     })
   },
-  getByGallery: function(galleryName){
+  getByParam: function(param){
     console.log("getting from within the controller")
-    console.log(galleryName)
+    console.log(param)
     return new Promise(function(resolve, reject){
       MongoClient.connect(url, function(err, db) {
         if (err) reject(err);
         var dbo = db.db("jekart");
-        dbo.collection("art").find(galleryName).sort({order: 1}).toArray(function(err, result) {
+        dbo.collection("art").find(param).sort({order: 1}).toArray(function(err, result) {
           if (err) reject(err);
           resolve(result);
           db.close();

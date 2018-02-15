@@ -16,7 +16,7 @@
 		<div id="page-menu" class="no-sticky">
 			<div id="page-menu-wrap" class='custom-page-banner'>
 				<div class="container clearfix">
-					<div class="menu-title">gallery <span>{{gallery[0].galleryName}}</span></div>
+					<div class="menu-title">gallery <span>{{galleryName}}</span></div>
 				</div>
 			</div>
 		</div>
@@ -34,16 +34,17 @@
             {{#gallery}}
   						<article class="portfolio-item pf-media pf-icons custom-hover">
   							<div class="portfolio-image">
-  								<a href="portfolio-single.html">
+  								<a href="/image/{{name}}">
                     <!-- gal covers eventually needs to be changed -->
   									<img src="/art_imgs/{{galleryName}}/{{imagePath}}" alt="Open Imagination">
   								</a>
-  								<div class="portfolio-overlay">
-  									<a href="/art_imgs/{{galleryName}}/{{imagePath}}" class="center-icon" data-lightbox="image" title="{{name}}"><i class="icon-line-plus"></i></a>
-  								</div>
   							</div>
   							<div class="portfolio-desc">
   								<h3><a class='custom-image-title'href="portfolio-single.html">{{name}}</a></h3>
+									<div class='details'>
+										<div class='description'>{{description}}</div>
+										<div class='dimensions'>{{dimensions}}</div>
+									</div>
   							</div>
   						</article>
             {{/gallery}}
@@ -62,12 +63,13 @@
 
 	<!-- Go To Top
 	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+	<div id="gotoTop" class="icon-angle-up" style></div>
 
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="/js/jquery.js"></script>
 	<script src="/js/plugins.js"></script>
+	<script src='/js/custom.js'></script>
 
 	<!-- Footer Scripts
 	============================================= -->

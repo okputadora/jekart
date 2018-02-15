@@ -3,16 +3,16 @@ var controllers = require('../controllers/')
 var router = express.Router();
 
 var galleries = [
-  {name:'2017/2018', imagePath: 'spaceman(minusframe).png'},
+  {name:'2017-2018', imagePath: 'bluemoon.png'},
   {name:'bedlam cups', imagePath: 'focalpoints.png'},
-  {name:'scribble faces', imagePath: 'thirdfloor.png'},
-  {name:'window', imagePath: 'spaceman(minusframe).png'},
-  {name:'wood blocks', imagePath: 'focalpoints.png'},
-  {name:'deep resin', imagePath: 'thirdfloor.png'},
-  {name:'wood burning', imagePath: 'spaceman(minusframe).png'},
-  {name:'degradation sets', imagePath: 'focalpoints.png'},
-  {name:'2016', imagePath: 'thirdfloor.png'},
-  {name:'2014-2015', imagePath: ''}
+  {name:'scribble faces', imagePath: 'napkinfaces.png'},
+  {name:'window', imagePath: 'windowdrip.png'},
+  {name:'wood blocks', imagePath: 'thirdfloor.png'},
+  {name:'deep resin', imagePath: 'resinman.png'},
+  {name:'wood burning', imagePath: 'woodwinter.png'},
+  {name:'degradation sets', imagePath: 'ds.png'},
+  {name:'2016', imagePath: 'nobody.png'},
+  {name:'2014-2015', imagePath: 'spaceman.png'},
 ];
 
 /* GET home page. */
@@ -49,10 +49,9 @@ router.get('/displayDbJSON', function(req, res, next){
 
 router.get('/gallery/:name', function(req, res, next){
   // check to make sure the user hasnt just entered anything and render the error Page
-  var resource = req.params.resource
   var name = {galleryName: req.params.name}
   controller = controllers['art']
-  controller.getByGallery(name)
+  controller.getByParam(name)
   .then(function(gallery){
     res.render('gallery', {
       galleryName: galleries[0].galleryName,
@@ -61,6 +60,25 @@ router.get('/gallery/:name', function(req, res, next){
     })
   })
   .catch()
+})
+
+router.get('/image/:name', function(req, res, next){
+  var name = {name: req.params.name}
+  controller = controllers['art']
+  controller.getByParam(name)
+  .then(function(image){
+    console.log(image)
+    image = image[0];
+    res.render('image', {
+      title: image.name,
+      imagePath: image.imagePath,
+      gallery: image.galleryName,
+      description: image.description,
+      dimensions: image.dimensions,
+      galleries: galleries
+    })
+  })
+
 })
 router.get('/confirmation', function(req, res, next){
   res.render('confirmation');

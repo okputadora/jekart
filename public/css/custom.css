@@ -17,7 +17,7 @@
 
 .custom-header{
   background-color: #292929 !important;
-  box-shadow: 2px 2px 2px 2px #181818;
+  box-shadow: 2px 2px 2px 2px #1b1b1b;
 }
 
 .custom-title{
@@ -62,7 +62,15 @@
 }
 
 .custom-page-banner{
-  background: #25bdc7d9 !important;
+  background: #1b1b1b!important;
+}
+
+.bread-crumb{
+  font-size: 13px !important;
+  font-weight: 900;
+  color: white;
+  font-family: 'Raleway';
+  text-transform: uppercase;
 }
 
 .flex-center{
@@ -92,7 +100,7 @@
 .right{
   float: right;
   text-align: right;
-  width: 300px;
+  width: 800px;
 }
 
 .fadeToBlack{
@@ -137,13 +145,13 @@
 .flex-container{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .gallery{
   position: relative;
   height: 300px;
-  margin-bottom: 15px;
+  margin: 0 15px 15px 15px;
 }
 
 .custom-background{
@@ -166,12 +174,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
   font-size: 40px;
   transition: .2s ease-in-out;
 }
-
+.gallery-title{
+  opacity: 1;
+}
 .gallery-description:hover{
   opacity: .8;
+}
+
+.details{
+  display: none !important;
 }
 
 @media screen and (max-width: 667px){
@@ -198,4 +213,8 @@
 
 .custom-hover:hover .custom-image-title{
   opacity: 1;
+}
+
+#gotoTop:hover{
+  background-color: black!important;
 }

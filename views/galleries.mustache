@@ -13,10 +13,10 @@
 		{{>nav }}
 		<!-- Page Sub Menu
 		============================================= -->
-		<div id="page-menu" class="no-sticky">
-			<div id="page-menu-wrap" class='custom-page-banner'>
+		<div id="page-menu" class="no-sticky" style="height: 30px; line-height: 30px;">
+			<div id="" class='custom-page-banner'>
 				<div class="container clearfix">
-					<div class="menu-title"><span>galleries</span></div>
+					<div><span class="bread-crumb">galleries</span></div>
 				</div>
 			</div>
 		</div>
@@ -36,10 +36,9 @@
 				<div id="galleries" class="flex-container">
 					{{#galleries}}
 					<a href='/gallery/{{name}}'><div id="gallery-{{name}}" class="gallery">
-						<img src="/art_imgs/gal_covers/{{imagePath}}" class="gallery-image"/>
-						<div class="gallery-description">
-							<div>{{name}}</div>
-						</div>
+						<img src="/art_imgs/{{name}}/{{imagePath}}" class="gallery-image"/>
+						<div class="gallery-description"><div class="gallery-title">{{name}}</div></div>
+
 					</div></a>
 					{{/galleries}}
 				</div>

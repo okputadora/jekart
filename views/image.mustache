@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{>head }}
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix" style>
+
+		<!-- Header
+		============================================= -->
+		{{>nav }}
+		<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu" class="no-sticky">
+			<div id="page-menu-wrap" class='custom-page-banner'>
+				<div class="container clearfix">
+					<div class="menu-title">gallery {{gallery}} <span> {{title}} </span></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content
+		============================================= -->
+    <section style="position: fixed;filter: opacity(80%) brightness(40%); top: 0; height: 100vh; width: 100vw; background: url('/art_imgs/{{gallery}}/background/{{imagePath}}'); background-attachment: fixed;"></section>
+    <section id="content" style="background: none">
+
+  <div class="content-wrap">
+
+    <div class="container clearfix">
+
+
+      <!-- Portfolio Items
+      ============================================= -->
+      <div id="portfolio" class="portfolio grid-container portfolio-1 clearfix">
+
+        <article class="portfolio-item pf-media pf-icons clearfix"  style='border-bottom: none'>
+          <div class="portfolio-image">
+              <a href='/art_imgs/{{gallery}}/{{imagePath}}'><img src="/art_imgs/{{gallery}}/{{imagePath}}" alt="{{name}}"></a>
+          </div>
+          <div class="portfolio-desc" style="color: white">
+            <h3 style="color: white; font-size:25px">{{title}}</h3>
+            <p style="font-size: 20px">{{description}}</p>
+            <ul style='font-size: 20px' class="iconlist">
+              {{dimensions}}
+            </ul>
+          </div>
+        </article>
+      </div><!-- #portfolio end -->
+    </div>
+  </div>
+</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		{{>footer}}
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="/js/jquery.js"></script>
+	<script src="/js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="/js/functions.js"></script>
+
+</body>
+</html>
