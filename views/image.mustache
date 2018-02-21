@@ -14,17 +14,19 @@
 		<!-- Page Sub Menu
 		============================================= -->
 		<div id="page-menu" class="no-sticky">
-			<div id="page-menu-wrap" class='custom-page-banner'>
+			<div id="page-menu-wrap" class='custom-page-banner' style="position: fixed; width: 100%;">
 				<div class="container clearfix">
-					<div class="menu-title">gallery {{gallery}} <span> {{title}} </span></div>
+					<div style="padding-left: 10px;"class="menu-title"><a href="/galleries">galleries</a>
+						<img style="margin: 5px;"src='/images/icons/submenu.png' /><a href="/gallery/{{gallery}}">{{gallery}}</a>
+						<img style="margin: 5px;"src='/images/icons/submenu.png' /> <span> {{title}} </span></div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Content
 		============================================= -->
-    <section style="position: fixed;filter: opacity(80%) brightness(40%); top: 0; height: 100vh; width: 100vw; background: url('/art_imgs/{{gallery}}/background/{{imagePath}}'); background-attachment: fixed;"></section>
-    <section id="content" style="background: none">
+<section style="position: fixed;filter: opacity(80%) brightness(40%); top: 0; height: 100vh; width: 100vw; background: url('/art_imgs/{{gallery}}/background/{{imagePath}}'); background-attachment: fixed; background-size: cover; background-position: center;"></section>
+<section id="content" style="background: none; height: 100%">
 
   <div class="content-wrap">
 
@@ -40,9 +42,9 @@
               <a href='/art_imgs/{{gallery}}/{{imagePath}}'><img src="/art_imgs/{{gallery}}/{{imagePath}}" alt="{{name}}"></a>
           </div>
           <div class="portfolio-desc" style="color: white">
-            <h3 style="color: white; font-size:25px">{{title}}</h3>
-            <p style="font-size: 20px">{{description}}</p>
-            <ul style='font-size: 20px' class="iconlist">
+            <h3 style="color: white; font-size:25px; text-transform:capitalize">{{title}}</h3>
+            <p style="font-size: 20px; line-height: 1.2">{{description}}</p>
+            <ul style='font-size: 20px; margin:0' class="iconlist">
               {{dimensions}}
             </ul>
           </div>

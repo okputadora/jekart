@@ -18,9 +18,16 @@ var galleries = [
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'Express',
+    title: 'JEK art',
     galleries: galleries
   });
+})
+
+router.get('/statement', function(req, res, next){
+  res.render('statement'), {
+    title: 'Statement',
+    galleries: galleries
+  }
 })
 router.get('/buildDb', function(req,res,next){
   res.render('buildDb');
@@ -54,7 +61,7 @@ router.get('/gallery/:name', function(req, res, next){
   controller.getByParam(name)
   .then(function(gallery){
     res.render('gallery', {
-      galleryName: galleries[0].galleryName,
+      galleryName: gallery[0].galleryName,
       gallery: gallery,
       galleries: galleries
     })
