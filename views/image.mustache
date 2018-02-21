@@ -13,15 +13,18 @@
 		{{>nav }}
 		<!-- Page Sub Menu
 		============================================= -->
-		<div id="page-menu" class="no-sticky">
-			<div id="page-menu-wrap" class='custom-page-banner' style="position: fixed; width: 100%;">
-				<div class="container clearfix">
-					<div style="padding-left: 10px;"class="menu-title"><a href="/galleries">galleries</a>
-						<img style="margin: 5px;"src='/images/icons/submenu.png' /><a href="/gallery/{{gallery}}">{{gallery}}</a>
-						<img style="margin: 5px;"src='/images/icons/submenu.png' /> <span> {{title}} </span></div>
+		<div class="row" style="min-width:100%;">
+			<div id="page-menu" class="no-sticky" style="width: 100%;">
+				<div id="" class='custom-page-banner custom-fixed' style="z-index: 99; width: 110%;">
+					<div class="container clearfix">
+						<div style="padding-left: 10px;"class="menu-title"><a href="/galleries">galleries</a>
+							<img style="margin: 5px;"src='/images/icons/submenu.png' /><a href="/gallery/{{gallery}}">{{gallery}}</a>
+							<img style="margin: 5px;"src='/images/icons/submenu.png' /> <span> {{title}} </span></div>
+					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<!-- Content
 		============================================= -->
@@ -54,11 +57,39 @@
   </div>
 </section><!-- #content end -->
 
-		<!-- Footer
-		============================================= -->
-		{{>footer}}
-	</div><!-- #wrapper end -->
+<!-- Footer
+============================================= -->
 
+	</div><!-- #wrapper end -->
+	<footer id="footer" class='dark' style='margin-top: 0px !important'>
+
+		<!-- Copyrights
+		============================================= -->
+		<div id="copyrights">
+			<div class="container clearfix">
+				<div class="col_half">
+					Copyrights &copy; 2018 All Rights Reserved by Joseph Edgerton Krause
+				</div>
+				<div class="col_half col_last tright">
+					<div class="fright clearfix">
+						<a href="#" class="social-icon si-small si-borderless si-instagram">
+							<i class="icon-instagram"></i>
+							<i class="icon-instagram"></i>
+						</a>
+						<a href="#" class="social-icon si-small si-borderless si-vimeo">
+							<i class="icon-vimeo"></i>
+							<i class="icon-vimeo"></i>
+						</a>
+					</div>
+					<div class="clear"></div>
+					<i class="icon-envelope2"></i> info@jekart.com
+				</div>
+
+			</div>
+
+		</div><!-- #copyrights end -->
+
+	</footer><!-- #footer end -->
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>

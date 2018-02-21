@@ -40,6 +40,27 @@ router.get('/galleries', function(req, res, next){
   })
 })
 
+router.get('/process', function(req, res, next){
+  res.render('process', {
+    title: 'Process',
+    galleries: galleries
+  })
+})
+
+var photos = [{name:'3rd floor process', path:'3rdfloorprocess2.jpg', description:'3rdfloorprocess3.jpg'},
+{name:'cooperation process', path:'cooperationprocess2.jpg', description:'cooporationprocess3.jpg'},
+{name:'name', path:'cooporationprocess4.jpg', descirption:'goblidoigoook'}]
+
+router.get('/process/photos', function(req, res, next){
+  res.render('photos', {
+    title: 'Process: Photos',
+    galleries: galleries,
+    photos: photos,
+
+  })
+})
+
+
 router.get('/displayDbJSON', function(req, res, next){
   controller = controllers['art']
   controller.get()
