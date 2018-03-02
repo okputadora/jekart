@@ -23,71 +23,44 @@ router.get('/', function(req, res, next) {
   });
 })
 
-router.get('/statement', function(req, res, next){
-  res.render('statement'), {
-    title: 'Statement',
-    galleries: galleries
+
+router.get('/:resource', function(req, res, next){
+  var resources = ['statement', 'galleries', 'process', 'events',
+      'upcoming-events', 'past-events', 'contact', 'confirmation']
+  resource = req.params.resource
+  console.log(resource)
+  if (resources.indexOf(resource) == -1){
+    res.render('error', {galleries: galleries})
+    return
   }
+  res.render(resource, {
+    title: resource,
+    galleries: galleries
+  })
 })
 router.get('/buildDb', function(req,res,next){
   res.render('buildDb');
 })
 
-router.get('/galleries', function(req, res, next){
-  res.render('galleries', {
-    title: 'Galleries',
-    galleries: galleries
-  })
-})
-
-router.get('/process', function(req, res, next){
-  res.render('process', {
-    title: 'Process',
-    galleries: galleries
-  })
-})
-
-var photos = [{name:'3rd floor process', path:'3rdfloorprocess2.jpg', description:'3rdfloorprocess3.jpg'},
-{name:'cooperation process', path:'cooperationprocess2.jpg', description:'cooporationprocess3.jpg'},
-{name:'name', path:'cooporationprocess4.jpg', descirption:'goblidoigoook'}]
-
-router.get('/process/photos', function(req, res, next){
-  res.render('photos', {
-    title: 'Process: Photos',
-    galleries: galleries,
-    photos: photos,
-
-  })
-})
-
-
-router.get('/displayDbJSON', function(req, res, next){
-  controller = controllers['art']
-  controller.get()
-  .then(function(results){
-    res.json(results)
-  })
-  .catch(function(err){
-    res.json({
-      error: 'fail',
-      message: err,
-    })
-  })
-})
-
 router.get('/gallery/:name', function(req, res, next){
+  console.log("in here?")
   // check to make sure the user hasnt just entered anything and render the error Page
-  var name = {galleryName: req.params.name}
+  var name = req.params.name
+  console.log(name)
   controller = controllers['art']
-  controller.getByParam(name)
+  controller.getByParam({galleryName: name})
   .then(function(gallery){
+    console.log("Rendering!@")
     res.render('gallery', {
-      galleryName: gallery[0].galleryName,
+      galleryName: name,
       gallery: gallery,
       galleries: galleries
     })
   })
-  .catch()
+  .catch(function(error){
+    console.log("error")
+    res.render("error", {galleries: galleries})
+  })
 })
 
 router.get('/image/:name', function(req, res, next){
@@ -106,14 +79,34 @@ router.get('/image/:name', function(req, res, next){
       galleries: galleries
     })
   })
+})
 
+var photos = [{name:'3rd floor process', path:'3rdfloorprocess2.jpg', description:'3rdfloorprocess3.jpg'},
+{name:'cooperation process', path:'cooperationprocess2.jpg', description:'cooporationprocess3.jpg'},
+{name:'name', path:'cooporationprocess4.jpg', descirption:'goblidoigoook'}]
+
+
+router.get('/upcoming-events', function(req, res, next){
+  res.render('upcoming-events', {
+    title: 'Events',
+    galleries: galleries,
+  })
 })
-router.get('/confirmation', function(req, res, next){
-  res.render('confirmation');
+
+router.get('/displayDbJSON', function(req, res, next){
+  controller = controllers['art']
+  controller.get()
+  .then(function(results){
+    res.json(results)
+  })
+  .catch(function(err){
+    res.json({
+      error: 'fail',
+      message: err,
+    })
+  })
 })
-router.get('/contact', function(req, res, next){
-  res.render('contact', {title: "Contact"});
-})
+
 
 // contact form
 router.post('/:action', function(req, res, next){

@@ -13,42 +13,57 @@
 		{{>nav }}
 		<!-- Page Sub Menu
 		============================================= -->
-		<div id="page-menu" class="no-sticky">
-			<div id="page-menu-wrap" class='custom-page-banner'style="position: fixed; width: 100%;">
+		<div id="page-menu" class="sticky" style="background: #1b1b1b">
+			<div id="" class='custom-page-banner'style="position: fixed; width: 100%;">
 				<div class="container clearfix">
-					<div style="padding-left: 10px;"class="menu-title"><span>process</span></div>
+					<div style="padding-left: 10px;"class="menu-title"><a href="/galleries"><span>process</span></a></div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
+    <section id="content">
 
 			<div class="content-wrap custom-background">
 
 				<div class="container clearfix">
 
-					<div class="clear"></div>
-
-					<!-- Portfolio Items
+					<!-- Posts
 					============================================= -->
-				<div id="galleries" class="flex-container">
-
-					<a href='/process/photos'><div id="videos" class="gallery">
-						<img src="/art_imgs/process/napkinsprocess.jpg" class="gallery-image"/>
-						<div class="gallery-description"><div class="gallery-title">Photos</div></div>
+					<div id="posts">
+						<div class="entry clearfix">
+							<div class="entry-image">
+								<div class="fslider" data-arrows="false" data-lightbox="gallery">
+									<div class="flexslider">
+										<div class="slider-wrap">
+											<div class="slide"><a href="/art_imgs/process/3rdfloorprocess1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/art_imgs/process/3rdfloorprocess1.jpg" alt="third floor process"></a></div>
+											<div class="slide"><a href="/art_imgs/process/3rdfloorprocess2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/art_imgs/process/3rdfloorprocess2.jpg" alt="third floor process"></a></div>
+											<div class="slide"><a href="/art_imgs/process/3rdfloorprocess3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/art_imgs/process/3rdfloorprocess3.jpg" alt="third floor process"></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="entry-title">
+								<h2 style="color: white">3rd Floor Process</h2>
+							</div>
+							<div class="entry-content">
+								<p style="color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga. Maiores, sunt eveniet doloremque porro hic exercitationem distinctio sequi adipisci. Nulla, fuga perferendis voluptatum beatae voluptate architecto laboriosam provident deserunt. Saepe!</p>
+							</div>
 						</div>
-					</a>
 
-					<a href='/process/videos'><div id="videos" class="gallery">
-						<img src="/art_imgs/process/" class="gallery-image"/>
-						<div class="gallery-description"><div class="gallery-title">Videos</div></div>
-						</div>
-					</a>
-
-				</div>
-
+            <div class="entry clearfix">
+             <div class="entry-image">
+               <iframe src="http://player.vimeo.com/video/87701971" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+             </div>
+             <div class="entry-title">
+               <h2 style="color: white">This is a Standard post with an Embedded Video</h2>
+             </div>
+             <div class="entry-content">
+               <p style="color: white">Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusdam veritatis quisquam laboriosam esse beatae hic perferendis velit deserunt soluta iste repellendus officia in neque veniam debitis placeat quo unde reprehenderit eum facilis vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, reprehenderit!</p>
+             </div>
+           </div>
+					</div><!-- #posts end -->
 
 				</div>
 
@@ -63,12 +78,13 @@
 
 	<!-- Go To Top
 	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+	<div id="gotoTop" class="icon-angle-up" style></div>
 
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="/js/jquery.js"></script>
 	<script src="/js/plugins.js"></script>
+	<script src='/js/custom.js'></script>
 
 	<!-- Footer Scripts
 	============================================= -->
