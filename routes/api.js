@@ -54,10 +54,6 @@ router.get('/:resource/:id', function(req, res, next){
 })
 router.post('/:resource', function(req, res, next){
 	var resource = req.params.resource;
-	if (resource == 'buildDb'){
-
-	}
-	var resource = req.params.resource
 	var controller = controllers[resource]
 	if (controller == null){
 		res.json({
