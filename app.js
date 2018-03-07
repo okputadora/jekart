@@ -7,16 +7,16 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var api = require('./routes/api');
 var dotenv = require('dotenv');
 
 
-mongoose.connect('mongodb://localhost/jekart', function(err, res){
+mongoose.connect(process.env.MONGO_DB, function(err, res){
   if (err){
     console.log('DB CONNECTION FAILED: '+err)
   }
   else{
-    console.log('DB CONNECTION SUCCESS: '+ 'mongodb://localhost/jekart')
+    console.log('DB CONNECTION SUCCESS: '+process.env.MONGO_DB)
   }
 })
 var app = express();
@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/api', api);
 app.use('/gallery', index)
 
 // catch 404 and forward to error handler

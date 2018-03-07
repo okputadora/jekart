@@ -25,10 +25,9 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/:resource', function(req, res, next){
+  var resource = req.params.resource
   var resources = ['statement', 'galleries', 'process', 'events',
-      'upcoming-events', 'past-events', 'contact', 'confirmation']
-  resource = req.params.resource
-  console.log(resource)
+      'upcoming-events', 'past-events', 'contact', 'confirmation', 'admin']
   if (resources.indexOf(resource) == -1){
     res.render('error', {galleries: galleries})
     return
@@ -38,15 +37,12 @@ router.get('/:resource', function(req, res, next){
     galleries: galleries
   })
 })
-router.get('/buildDb', function(req,res,next){
-  res.render('buildDb');
-})
 
 router.get('/gallery/:name', function(req, res, next){
-  console.log("in here?")
+
   // check to make sure the user hasnt just entered anything and render the error Page
   var name = req.params.name
-  console.log(name)
+
   controller = controllers['art']
   controller.getByParam({galleryName: name})
   .then(function(gallery){
@@ -81,35 +77,17 @@ router.get('/image/:name', function(req, res, next){
   })
 })
 
-var photos = [{name:'3rd floor process', path:'3rdfloorprocess2.jpg', description:'3rdfloorprocess3.jpg'},
-{name:'cooperation process', path:'cooperationprocess2.jpg', description:'cooporationprocess3.jpg'},
-{name:'name', path:'cooporationprocess4.jpg', descirption:'goblidoigoook'}]
-
-
-router.get('/upcoming-events', function(req, res, next){
-  res.render('upcoming-events', {
-    title: 'Events',
-    galleries: galleries,
-  })
+router.post('/:resource/:action', function(req, res, next){
+  resource = req.params.resource
+	if (resource == 'api'){
+    console.log(resource)
+    next()
+    return
+  }
 })
-
-router.get('/displayDbJSON', function(req, res, next){
-  controller = controllers['art']
-  controller.get()
-  .then(function(results){
-    res.json(results)
-  })
-  .catch(function(err){
-    res.json({
-      error: 'fail',
-      message: err,
-    })
-  })
-})
-
-
 // contact form
 router.post('/:action', function(req, res, next){
+  console.log("we're missing the API route")
   var action = req.params.action
   if (action == 'contact'){
     res.redirect('/confirmation');

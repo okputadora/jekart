@@ -1,11 +1,11 @@
 var express = require('express')
 var router = express.Router()
 var controllers = require('../controllers')
-var artCollection = require('../art.js')
 
 
 router.get('/:resource', function(req, res, next){
 	var resource = req.params.resource;
+	console.log("trying to get")
 	var controller = controllers[resource]
 	if (controller == null){
 		res.json({
@@ -52,9 +52,11 @@ router.get('/:resource/:id', function(req, res, next){
 		})
 	})
 })
-router.post('/:resource', function(req, res, next){
-	var resource = req.params.resource;
-	var controller = controllers[resource]
+
+router.post('/:action', function(req, res, next){
+	var action = req.params.action;
+	var controller = controllers[action]
+	console.log(controller)
 	if (controller == null){
 		res.json({
 			confirmation:'fail',

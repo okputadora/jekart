@@ -1,7 +1,6 @@
-var art = require('../models/art')
+var Art = require('../models/art')
 var Promise = require('bluebird')
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var mongoose = require('mongoose')
 
 
 module.exports = {
@@ -32,6 +31,21 @@ module.exports = {
           db.close();
         });
       })
+    })
+  },
+
+  post: function(params){
+    console.log(params)
+    return new Promise(function(resolve, reject){
+      Art.create(params, function(err, art){
+        if (err){
+          reject(err)
+          return
+        }
+        resolve(art)
+        return
+      })
+
     })
   }
 }

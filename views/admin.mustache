@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{> head }}
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+    {{> nav }}
+		<section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<div class="clear"></div>
+					<h1 style="align-self: center;">Update Database</h1>
+          <form action="/api/art" method="POST">
+            <h4 style="margin-bottom: 5px">Add new art</h4>
+            <input type='text' placeholder='name' name='name' /><br />
+            <input type='text' placeholder='image name' name='imagePath' /><br />
+            <input type='text' placeholder='gallery name' name='galName' /><br />
+            <input type='text' placeholder='gallery id' name='galId' /><br />
+            <input type='text' placeholder='cover photo?' name='coverPhoto' /><br />
+            <input type='text' placeholder='dimesnions' name='dimensions' /><br />
+            <input type='text' placeholder='description' name='description' /><br />
+            <input type='text' placeholder='for sale?' name='forsale' /><br />
+            <input type='text' placeholder='price' name='price' /><br />
+            <input type='text' placeholder='order' name='order' /><br />
+            <input type='submit' name='art' value='submit' />
+          </form>
+
+				</div>
+
+			</div>
+
+		</section>
+
+    {{> footer }}
+	</div><!-- #wrapper end -->
+
+  	<!-- External JavaScripts
+  	============================================= -->
+  	<script src="js/jquery.js"></script>
+  	<script src="js/plugins.js"></script>
+
+  	<!-- Footer Scripts
+  	============================================= -->
+  	<script src="js/functions.js"></script>
+  	<!-- <script src='js/navTransition.js'></script> -->
+  </body>
+  </html>
