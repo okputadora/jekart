@@ -250,3 +250,9 @@ a {
 #gotoTop:hover{
   background-color: black!important;
 }
+
+/* ADMIN PAGE */
+.adminTable{
+  padding: 0!important;
+  width: 50px;
+}

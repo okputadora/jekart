@@ -9,41 +9,48 @@
 	<div id="wrapper" class="clearfix">
 
     {{> nav }}
-		<section id="content">
+		<section id="content" style="overflow: scroll">
 
 			<div class="content-wrap">
 
-				<div class="container clearfix">
+				<div class="clearfix">
 
 					<div class="clear"></div>
 					<h1 style="align-self: center;">Update Art Database</h1>
           <form action="/api/art" method="POST">
-            <h4 style="margin-bottom: 5px">Add new art</h4>
-						<input type="number" placeholder='id'name='id'/>
-            <input type='text' placeholder='name' name='name' /><br />
-            <input type='text' placeholder='image name' name='imagePath' /><br />
-            <input type='text' placeholder='gallery name' name='galName' /><br />
-            <input type='text' placeholder='gallery id' name='galId' /><br />
-            <input type='text' placeholder='cover photo?' name='coverPhoto' /><br />
-            <input type='text' placeholder='dimesnions' name='dimensions' /><br />
-            <input type='text' placeholder='description' name='description' /><br />
-            <input type='text' placeholder='for sale?' name='forsale' /><br />
-            <input type='text' placeholder='price' name='price' /><br />
-            <input type='text' placeholder='order' name='order' /><br />
-            <input type='submit' name='art' value='submit' />
-          </form>
-
-					<h1>View Art Database</h1>
-					<form action="/api/art" method="GET">
-						<input type="submit" />
+						<table class='table table-bordered'>
+							<tr>
+								<th class="adminTable">id</th>
+								<th class="adminTable">name</th>
+								<th class="adminTable">image file name</th>
+								<th class="adminTable">gallery name</th>
+								<th class="adminTable">gallery id</th>
+								<th class="adminTable">cover photo?</th>
+								<th class="adminTable">dimensions</th>
+								<th class="adminTable">description</th>
+								<th class="adminTable">for sale?</th>
+								<th class="adminTable">price</th>
+								<th class="adminTable">order</th>
+							</tr>
+							<tr>
+								<td class="adminTable"><input type="number" placeholder='id'name='id'/></td>
+								<td class="adminTable"><input type='text' placeholder='name' name='name' /></td>
+								<td class="adminTable"><input type='text' placeholder='image name' name='imagePath' /></td>
+								<td class="adminTable"><input type='text' placeholder='gallery name' name='galName' /></td>
+								<td class="adminTable"><input type='text' placeholder='gallery ID' name='galId' /></td>
+								<td class="adminTable"><input type='text' placeholder='cover photo?' name='coverPhoto' /></td>
+								<td class="adminTable"><input type='text' placeholder='dimesnions' name='dimensions'  /></td>
+								<td class="adminTable"><input type='text' placeholder='description' name='description' /></td>
+								<td class="adminTable"><input type='text' placeholder='for sale?' name='forsale'  /></td>
+								<td class="adminTable"><input type='text' placeholder='price' name='price' /></td>
+								<td class="adminTable"><input type='number' placeholder='order' name='order' /></td>
+							</tr>
+						</table>
+						<input type='submit' name='art' value='submit' />
 					</form>
-
 				</div>
-
 			</div>
-
 		</section>
-
     {{> footer }}
 	</div><!-- #wrapper end -->
 

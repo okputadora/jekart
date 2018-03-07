@@ -52,7 +52,6 @@ router.get('/gallery/:name', function(req, res, next){
   controller = controllers['art']
   controller.getByParam({galleryName: name})
   .then(function(gallery){
-    console.log("Rendering!@")
     res.render('gallery', {
       galleryName: name,
       gallery: gallery,
@@ -60,7 +59,6 @@ router.get('/gallery/:name', function(req, res, next){
     })
   })
   .catch(function(error){
-    console.log("error")
     res.render("error", {galleries: galleries})
   })
 })
@@ -70,7 +68,6 @@ router.get('/image/:name', function(req, res, next){
   controller = controllers['art']
   controller.getByParam(name)
   .then(function(image){
-    console.log(image)
     image = image[0];
     res.render('image', {
       title: image.name,
@@ -83,10 +80,8 @@ router.get('/image/:name', function(req, res, next){
   })
 })
 
-
 // contact form
 router.post('/:action', function(req, res, next){
-  console.log("we're missing the API route")
   var action = req.params.action
   if (action == 'contact'){
     res.redirect('/confirmation');
