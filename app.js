@@ -8,15 +8,13 @@ var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var api = require('./routes/api');
-var dotenv = require('dotenv');
-
-
+require('dotenv').config();
 mongoose.connect(process.env.MONGO_DB, function(err, res){
   if (err){
     console.log('DB CONNECTION FAILED: '+err)
   }
   else{
-    console.log('DB CONNECTION SUCCESS: '+process.env.MONGO_DB)
+    console.log('DB CONNECTION SUCCESS: '+ process.env.MONGO_DB)
   }
 })
 var app = express();

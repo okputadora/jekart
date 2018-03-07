@@ -1,6 +1,5 @@
 var Art = require('../models/art')
 var Promise = require('bluebird')
-var mongoose = require('mongoose')
 
 
 module.exports = {
@@ -37,11 +36,16 @@ module.exports = {
   post: function(params){
     console.log(params)
     return new Promise(function(resolve, reject){
+      console.log("how bout here")
       Art.create(params, function(err, art){
         if (err){
+          console.log("Error")
+          console.log(err)
           reject(err)
           return
         }
+        console.log("success")
+        console.log(art)
         resolve(art)
         return
       })
