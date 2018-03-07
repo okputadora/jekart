@@ -19,12 +19,17 @@ module.exports = {
   getByParam: function(param){
     console.log("getting from within the controller")
     console.log(param)
+    console.log(typeof(param.galleryName))
     return new Promise(function(resolve, reject){
-      Art.find(param, function(err, art) {
+      Art.find(param, null, function(err, art) {
+        console.log("found")
         if (err){
+          console.log("ERROR")
+          console.log(err)
           reject(err)
           return
         }
+        console.log(art)
         resolve(art);
       })
     })

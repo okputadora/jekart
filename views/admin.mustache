@@ -10,13 +10,9 @@
 
     {{> nav }}
 		<section id="content" style="overflow: scroll">
-
 			<div class="content-wrap">
-
-				<div class="clearfix">
-
 					<div class="clear"></div>
-					<h1 style="align-self: center;">Update Art Database</h1>
+					<h1 style="align-self: center;">Add Art to Database</h1>
           <form action="/api/art" method="POST">
 						<table class='table table-bordered'>
 							<tr>
@@ -48,7 +44,11 @@
 						</table>
 						<input type='submit' name='art' value='submit' />
 					</form>
-				</div>
+
+				<form action="/api/art" method="GET">
+					<h1>View Database</h1>
+					<input type='submit' />
+				</form>
 			</div>
 		</section>
     {{> footer }}

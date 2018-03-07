@@ -48,7 +48,8 @@ router.get('/gallery/:name', function(req, res, next){
 
   // check to make sure the user hasnt just entered anything and render the error Page
   var name = req.params.name
-
+  console.log(name)
+  console.log(typeof(name))
   controller = controllers['art']
   controller.getByParam({galleryName: name})
   .then(function(gallery){
