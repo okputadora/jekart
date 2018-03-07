@@ -5,15 +5,14 @@ var Promise = require('bluebird')
 module.exports = {
   // create a new gallery
   get: function(){
+    console.log("we're in here")
     return new Promise(function(resolve, reject){
-      MongoClient.connect(url, function(err, db) {
-        if (err) reject(err);
-        var dbo = db.db("jekart");
-        dbo.collection("art").find({}).toArray(function(err, result) {
-          if (err) reject(err);
-          resolve(result);
-          db.close();
-        });
+      Art.find(function(err, result) {
+        if (err) {
+          reject(err)
+          return;
+        }
+        resolve(result);
       })
     })
   },
@@ -21,31 +20,23 @@ module.exports = {
     console.log("getting from within the controller")
     console.log(param)
     return new Promise(function(resolve, reject){
-      MongoClient.connect(url, function(err, db) {
-        if (err) reject(err);
-        var dbo = db.db("jekart");
-        dbo.collection("art").find(param).sort({order: 1}).toArray(function(err, result) {
-          if (err) reject(err);
-          resolve(result);
-          db.close();
-        });
+      Art.find(param, function(err, art) {
+        if (err){
+          reject(err)
+          return
+        }
+        resolve(art);
       })
     })
   },
 
   post: function(params){
-    console.log(params)
     return new Promise(function(resolve, reject){
-      console.log("how bout here")
       Art.create(params, function(err, art){
         if (err){
-          console.log("Error")
-          console.log(err)
           reject(err)
           return
         }
-        console.log("success")
-        console.log(art)
         resolve(art)
         return
       })

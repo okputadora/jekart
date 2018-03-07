@@ -1,3 +1,9 @@
+
+// it seems like we're not actually using the api route to separate our
+// concerns. shouldn't the api be handling not just the admins request for data
+// but the users as well? but then what is the index route for? I thought it was
+// for sending all of the pages to the user? Obviously I don't understand how
+// different routes are supposed to be employed
 var express = require('express');
 var controllers = require('../controllers/')
 var router = express.Router();
@@ -77,14 +83,7 @@ router.get('/image/:name', function(req, res, next){
   })
 })
 
-router.post('/:resource/:action', function(req, res, next){
-  resource = req.params.resource
-	if (resource == 'api'){
-    console.log(resource)
-    next()
-    return
-  }
-})
+
 // contact form
 router.post('/:action', function(req, res, next){
   console.log("we're missing the API route")

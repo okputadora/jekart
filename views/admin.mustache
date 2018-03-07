@@ -16,9 +16,10 @@
 				<div class="container clearfix">
 
 					<div class="clear"></div>
-					<h1 style="align-self: center;">Update Database</h1>
+					<h1 style="align-self: center;">Update Art Database</h1>
           <form action="/api/art" method="POST">
             <h4 style="margin-bottom: 5px">Add new art</h4>
+						<input type="number" placeholder='id'name='id'/>
             <input type='text' placeholder='name' name='name' /><br />
             <input type='text' placeholder='image name' name='imagePath' /><br />
             <input type='text' placeholder='gallery name' name='galName' /><br />
@@ -31,6 +32,11 @@
             <input type='text' placeholder='order' name='order' /><br />
             <input type='submit' name='art' value='submit' />
           </form>
+
+					<h1>View Art Database</h1>
+					<form action="/api/art" method="GET">
+						<input type="submit" />
+					</form>
 
 				</div>
 

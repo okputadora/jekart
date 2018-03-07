@@ -1,5 +1,6 @@
 var mongoose = require('mongoose')
 var artSchema = new mongoose.Schema({
+  id: {type:Number, required: true},
   name: {type:String, trim:true, lowercase:true, default:''},
   imagePath: {type:String, trim:true, lowercase:true, default:''},
   galleryName: {type:String, trim:true, lowercase:true, default:''},
