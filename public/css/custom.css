@@ -181,7 +181,7 @@ a {
 }
 
 .custom-background{
-  background: url('../art_imgs/background/main1.png');
+  background: url('/art_imgs/background/main1.png');
   background-attachment:fixed;
   min-height: 80vh;
 }
