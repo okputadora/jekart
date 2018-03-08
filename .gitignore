@@ -11,3 +11,5 @@
 /public/art_imgs/window/
 /public/art_imgs/wood blocks/
 /public/art_imgs/wood burning/
+sendgrid.env
+.env

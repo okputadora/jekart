@@ -1,6 +1,6 @@
-Inquiry = require('../models/Inquiry')
+Inquiry = require('../models/inquiry')
 var Promise = require('bluebird')
-var helper = require('sendgrid').mail;
+var sgMail = require('@sendgrid/mail');
 
 
 module.exports = {
@@ -28,24 +28,22 @@ module.exports = {
     })
   },
   post: function(params){
-
     // send email via sendgrid
-    var from_email = new helper.Email(params.email);
-    var to_email = new helper.Email('mmcveigh33@gmail.com');
-    var subject = params.subject;
-    var content = new helper.Content('text/plain', params.message);
-    var mail = new helper.Mail(from_email, subject, to_email, content);
-    var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-    var request = sg.emptyRequest({
-      method: 'POST',
-      path: '/v3/mail/send',
-      body: mail.toJSON(),
-    });
-
-    sg.API(request, function(error, response) {
-      console.log(response.statusCode);
-      console.log(response.body);
-      console.log(response.headers);
+    console.log("Sending email")
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    const msg = {
+      to: 'mmcveigh33@gmail.com',
+      from: params.email,
+      subject: params.subject,
+      text: params.message
+    }
+    sgMail.send(msg, (error, result) => {
+      if (error){
+        console.log(error)
+        return
+      }
+      console.log("no error")
+      console.log(result[0])
     })
     // add to database
     return new Promise(function(resolve, reject){
