@@ -101,7 +101,7 @@ router.get('/shop-item/:item', function(req,res,next){
 // contact form
 router.post('/:action', function(req, res, next){
   var action = req.params.action
-  if (action == 'contact'){
+  if (action == 'inquiry'){
     res.redirect('/confirmation');
   }
 })

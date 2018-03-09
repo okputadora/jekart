@@ -58,7 +58,7 @@ router.get('/:resource/:id', function(req, res, next){
 router.post('/:action', function(req, res, next){
 	var action = req.params.action;
 	var controller = controllers[action]
-	console.log(controller)
+	console.log(action)
 	if (controller == null){
 		res.json({
 			confirmation:'fail',
@@ -68,6 +68,10 @@ router.post('/:action', function(req, res, next){
 	// req.body is the form data...input names from form must match names in the database schemas
 	controller.post(req.body)
 	.then(function(result){
+		if (action == 'inquiry'){
+			res.redirect('/confirmation')
+			return
+		}
 		res.json({
 			confirmation: 'success',
 			result: result

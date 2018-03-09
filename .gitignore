@@ -1,15 +1,4 @@
 /public/theme/
 /node_modules/
-/public/art_imgs/2014-2015/
-/public/art_imgs/2016/
-/public/art_imgs/2017-2018/
-/public/art_imgs/bedlam cups/
-/public/art_imgs/deep resin/
-/public/art_imgs/degradation sets/
-/public/art_imgs/process/
-/public/art_imgs/scribble faces/
-/public/art_imgs/window/
-/public/art_imgs/wood blocks/
-/public/art_imgs/wood burning/
 sendgrid.env
 .env

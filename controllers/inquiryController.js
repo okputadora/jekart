@@ -29,7 +29,6 @@ module.exports = {
   },
   post: function(params){
     // send email via sendgrid
-    console.log("Sending email")
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
       to: 'mmcveigh33@gmail.com',
@@ -39,11 +38,8 @@ module.exports = {
     }
     sgMail.send(msg, (error, result) => {
       if (error){
-        console.log(error)
         return
       }
-      console.log("no error")
-      console.log(result[0])
     })
     // add to database
     return new Promise(function(resolve, reject){
@@ -52,7 +48,6 @@ module.exports = {
          reject(err)
          return
        }
-       console.log(inquiry)
        resolve(inquiry)
       })
     })
