@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{> head }}
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+    {{> nav }}
+		<div id="page-menu" class="no-sticky" style="background: #1b1b1b">
+			<div id="" class='custom-page-banner'style="position: fixed; width: 100%;">
+				<div class="container clearfix">
+					<div style="padding-left: 10px;"class="menu-title"><span>shop</span></div>
+				</div>
+			</div>
+		</div>
+
+    <section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<!-- Shop
+					============================================= -->
+					<div id="shop" class="shop grid-container clearfix" data-layout="fitRows">
+
+						<div class="product clearfix">
+							<div class="product-image">
+								<a href="/shop-single"><img src="art_imgs/2016/nobody.png" alt="Slim Fit Chinos"></a>
+								<a href="/shop-single"><img src="art_imgs/2016/rollit.png" alt="Slim Fit Chinos"></a>
+								<div class="product-overlay">
+									<a href="#" class="add-to-cart" style="width:100%"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
+									<!-- <a href="include/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick View</span></a> -->
+								</div>
+							</div>
+							<div class="product-desc">
+								<div class="product-title"><h3><a href="#">Nobody print</a></h3></div>
+								<div class="product-price">$39.99</div>
+								<div class="product-rating">
+									<i class="icon-star3"></i>
+									<i class="icon-star3"></i>
+									<i class="icon-star3"></i>
+									<i class="icon-star-half-full"></i>
+									<i class="icon-star-empty"></i>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- #shop end -->
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+    {{> footer }}
+	</div><!-- #wrapper end -->
+
+  	<!-- External JavaScripts
+  	============================================= -->
+  	<script src="js/jquery.js"></script>
+  	<script src="js/plugins.js"></script>
+
+  	<!-- Footer Scripts
+  	============================================= -->
+  	<script src="js/functions.js"></script>
+  	<!-- <script src='js/navTransition.js'></script> -->
+  </body>
+  </html>

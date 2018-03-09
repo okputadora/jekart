@@ -36,6 +36,7 @@ gulp.task('css', function(){
       './public/css/magnific-popup.css',
       './public/css/custom.css',
       './public/css/responsive.css',
+      './public/css/shop.css'
     ]
   )
   .pipe(minifyCSS())

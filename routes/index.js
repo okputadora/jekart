@@ -33,7 +33,7 @@ router.get('/', function(req, res, next) {
 router.get('/:resource', function(req, res, next){
   var resource = req.params.resource
   var resources = ['statement', 'galleries', 'process', 'events',
-      'upcoming-events', 'past-events', 'contact', 'confirmation', 'admin']
+      'upcoming-events', 'shop', 'past-events', 'contact', 'confirmation', 'admin']
   if (resources.indexOf(resource) == -1){
     res.render('error', {galleries: galleries})
     return
@@ -45,11 +45,7 @@ router.get('/:resource', function(req, res, next){
 })
 
 router.get('/gallery/:name', function(req, res, next){
-
-  // check to make sure the user hasnt just entered anything and render the error Page
   var name = req.params.name
-  console.log(name)
-  console.log(typeof(name))
   controller = controllers['art']
   controller.getByParam({galleryName: name})
   .then(function(gallery){
@@ -79,8 +75,29 @@ router.get('/image/:name', function(req, res, next){
       galleries: galleries
     })
   })
+  .catch(function(error){
+    res.render("error", {galleries: galleries})
+  })
 })
 
+router.get('/shop-item/:item', function(req,res,next){
+  var name = {name: req.params.item}
+  controller = controllers['prints']
+  controller.getByParam(name)
+  .then(function(print){
+    res.render('shop-item', {
+      name: print.name,
+      image1: print.image1,
+      image2: print.image2,
+      description: print.description,
+      dimensions: print.dimensions,
+      price: price
+    })
+  })
+  .catch(function(error){
+    res.render("error", {galleries: galleries})
+  })
+})
 // contact form
 router.post('/:action', function(req, res, next){
   var action = req.params.action
