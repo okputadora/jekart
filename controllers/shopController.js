@@ -1,12 +1,11 @@
-var Art = require('../models/art')
+var Shop = require('../models/shop')
 var Promise = require('bluebird')
-
 
 module.exports = {
   // create a new gallery
   get: function(){
     return new Promise(function(resolve, reject){
-      Art.find(function(err, result) {
+      Shop.find(function(err, result) {
         if (err) {
           reject(err)
           return;
@@ -17,24 +16,24 @@ module.exports = {
   },
   getByParam: function(param){
     return new Promise(function(resolve, reject){
-      Art.find(param, null, function(err, art) {
+      Shop.find(param, null, function(err, item) {
         if (err){
           reject(err)
           return
         }
-        resolve(art);
+        resolve(item);
       })
     })
   },
 
   post: function(params){
     return new Promise(function(resolve, reject){
-      Art.create(params, function(err, art){
+      Shop.create(params, function(err, item){
         if (err){
           reject(err)
           return
         }
-        resolve(art)
+        resolve(item)
         return
       })
 
