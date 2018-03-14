@@ -33,7 +33,8 @@ router.get('/', function(req, res, next) {
 router.get('/:resource', function(req, res, next){
   var resource = req.params.resource
   var resources = ['statement', 'galleries', 'process', 'events',
-      'upcoming-events', 'shop', 'past-events', 'contact', 'confirmation', 'admin']
+      'upcoming-events', 'shop', 'past-events', 'contact', 'confirmation',
+      'cart', 'checkout', 'admin']
   if (resources.indexOf(resource) == -1){
     res.render('error', {galleries: galleries})
     return
