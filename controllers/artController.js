@@ -3,7 +3,6 @@ var Promise = require('bluebird')
 
 
 module.exports = {
-  // create a new gallery
   get: function(){
     return new Promise(function(resolve, reject){
       Art.find(function(err, result) {
@@ -23,7 +22,7 @@ module.exports = {
           return
         }
         resolve(art);
-      })
+      }).sort({order: 1})
     })
   },
 

@@ -34,7 +34,7 @@ router.get('/:resource', function(req, res, next){
   var resource = req.params.resource
   var resources = ['statement', 'galleries', 'process', 'events',
       'upcoming-events', 'shop', 'past-events', 'contact', 'confirmation',
-      'cart', 'checkout', 'admin']
+      'cart', 'checkout', 'shop-item', 'admin']
   if (resources.indexOf(resource) == -1){
     res.render('error', {galleries: galleries})
     return
@@ -50,6 +50,7 @@ router.get('/gallery/:name', function(req, res, next){
   controller = controllers['art']
   controller.getByParam({galleryName: name})
   .then(function(gallery){
+    // if name = degradation set then we need to load a differnet template
     res.render('gallery', {
       galleryName: name,
       gallery: gallery,

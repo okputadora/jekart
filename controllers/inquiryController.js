@@ -31,7 +31,7 @@ module.exports = {
     // send email via sendgrid
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
-      to: 'mmcveigh33@gmail.com',
+      to: 'josephekart@gmail.com',
       from: params.email,
       subject: params.subject,
       text: params.message
