@@ -30,17 +30,34 @@ router.get('/', function(req, res, next) {
 })
 
 
-router.get('/:resource', function(req, res, next){
-  var resource = req.params.resource
-  var resources = ['statement', 'galleries', 'process', 'events',
+router.get('/:page', function(req, res, next){
+  var page = req.params.page
+  console.log(page)
+  var pages = ['statement', 'galleries', 'process', 'events',
       'upcoming-events', 'shop', 'past-events', 'contact', 'confirmation',
       'cart', 'checkout', 'shop-item', 'admin']
-  if (resources.indexOf(resource) == -1){
+  if (pages.indexOf(page) == -1){
+    console.log("ERRRRROR ")
     res.render('error', {galleries: galleries})
     return
   }
-  res.render(resource, {
-    title: resource,
+  if (page == "shop"){
+    console.log("/shop")
+    controller = controllers['prints']
+    controller.get()
+    .then(function(prints){
+      res.render('shop', {
+        galleries: galleries,
+        prints: prints
+      })
+    })
+    .catch(function(error){
+      res.render('error', {galleries: galleries})
+    })
+    return
+  }
+  res.render(page, {
+    title: page,
     galleries: galleries
   })
 })

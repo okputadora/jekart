@@ -10,7 +10,7 @@
     "amount": 50,
     "galleryName": "2017 - 2018",
     "image1": "bluemoonposterwebsite.jpg",
-    "image2": ""
+    "Order": 1000
   },
   {
     "name": "Dichotomy",
@@ -23,7 +23,7 @@
     "amount": 50,
     "galleryName": 2016,
     "image1": "dichotomyposterwebsite.jpg",
-    "image2": ""
+    "Order": 1100
   },
   {
     "name": "Electrical Box",
@@ -36,7 +36,7 @@
     "amount": 50,
     "galleryName": 2016,
     "image1": "electricalboxposterwebsite.jpg",
-    "image2": ""
+    "Order": 100
   },
   {
     "name": "Faceman",
@@ -49,7 +49,7 @@
     "amount": 50,
     "galleryName": 2016,
     "image1": "facemanposterwebsite.jpg",
-    "image2": ""
+    "Order": 200
   },
   {
     "name": "Lighthouse",
@@ -62,7 +62,7 @@
     "amount": 50,
     "galleryName": "2017-2018",
     "image1": "lighthouseposterwebsite.jpg",
-    "image2": ""
+    "Order": 300
   },
   {
     "name": "Octopus",
@@ -75,7 +75,7 @@
     "amount": 50,
     "galleryName": 2016,
     "image1": "octopusposterwebsite.jpg",
-    "image2": ""
+    "Order": 400
   },
   {
     "name": "Portrait",
@@ -88,7 +88,7 @@
     "amount": 50,
     "galleryName": 2016,
     "image1": "portraitposterwebsite.jpg",
-    "image2": ""
+    "Order": 500
   },
   {
     "name": "Scribble Faces Tall",
@@ -101,7 +101,7 @@
     "amount": 50,
     "galleryName": "Scribble Faces",
     "image1": "scribblefacestallposterwebsite.jpg",
-    "image2": ""
+    "Order": 600
   },
   {
     "name": "Scribble Faces Square",
@@ -114,7 +114,7 @@
     "amount": 50,
     "galleryName": "Scribble Faces",
     "image1": "scribblefacessquareposterwebsite.jpg",
-    "image2": ""
+    "Order": 700
   },
   {
     "name": "Space Case",
@@ -127,7 +127,7 @@
     "amount": 50,
     "galleryName": 2016,
     "image1": "spacecaseposterwebsite.jpg",
-    "image2": ""
+    "Order": 1200
   },
   {
     "name": "Window Drip",
@@ -140,7 +140,7 @@
     "amount": 50,
     "galleryName": "Window",
     "image1": "windowdripposterwebsite.jpg",
-    "image2": ""
+    "Order": 1400
   },
   {
     "name": "Window",
@@ -153,7 +153,7 @@
     "amount": 50,
     "galleryName": "Window",
     "image1": "windowposterwebsite.jpg",
-    "image2": ""
+    "Order": 800
   },
   {
     "name": "Window Square",
@@ -166,7 +166,7 @@
     "amount": 50,
     "galleryName": "Window",
     "image1": "windowsquareposterwebsite.jpg",
-    "image2": ""
+    "Order": 900
   },
   {
     "name": "Worm Hole",
@@ -179,6 +179,6 @@
     "amount": 50,
     "galleryName": "2017 - 2018",
     "image1": "wormholeposterwebsite.jpg",
-    "image2": ""
+    "Order": 1300
   }
 ]

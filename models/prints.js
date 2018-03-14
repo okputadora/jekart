@@ -11,6 +11,7 @@ var printsSchema = new mongoose.Schema({
   galleryName: {type:String, trim:true, lowercase:true, default:''},
   image1: {type:String, trim:true, lowercase:true, default:''},
   image2: {type:String, trim:true, lowercase:true, default:''},
+  order: {type:Number}
 })
 
 module.exports = mongoose.model('printsSchema', printsSchema)

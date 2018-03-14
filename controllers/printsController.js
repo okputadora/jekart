@@ -5,13 +5,13 @@ module.exports = {
   // create a new gallery
   get: function(){
     return new Promise(function(resolve, reject){
-      Prints.find(function(err, result) {
+      Prints.find(function(err, results) {
         if (err) {
           reject(err)
           return;
         }
-        resolve(result);
-      })
+        resolve(results);
+      }).sort({Order: 1})
     })
   },
   getByParam: function(param){

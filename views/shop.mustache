@@ -27,21 +27,22 @@
 					<!-- Shop
 					============================================= -->
 					<div id="shop" class="shop grid-container clearfix" data-layout="fitRows">
-
+					{{#prints}}
 						<div class="product clearfix">
 							<div class="product-image">
-								<a href="/shop-single/{{name}}"><img src="art_imgs/2016/nobody.png" alt="{{name}}"></a>
-								<a href="/shop-single"><img src="art_imgs/2016/rollit.png" alt="{{name}}"></a>
+								<a href="/shop-single/{{name}}"><img src="/art_imgs/prints/{{image1}}" alt="{{name}}"></a>
+								<!-- <a href="/shop-single"><img src="" alt="{{name}}"></a> -->
 								<div class="product-overlay">
 									<a href="#" class="add-to-cart" style="width:100%"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
 									<!-- <a href="include/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick View</span></a> -->
 								</div>
 							</div>
-							<div class="product-desc">
-								<div class="product-title"><h3><a href="#">Nobody print</a></h3></div>
-								<div class="product-price ">$39.99</div>
+							<div class="product-desc text-center" style="padding-top: 0">
+								<div class="product-title" style="margin:0"><h3><a href="#">{{name}}</a></h3></div>
+								<span class="product-price" style="font-size: 17px">${{price1}}</span>
 							</div>
 						</div>
+					{{/prints}}
 					</div><!-- #shop end -->
 				</div>
 			</div>
