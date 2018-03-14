@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 var printsSchema = new mongoose.Schema({
-  name: {type:String, trim:true, lowercase:true, default:''},
+  name: {type:String, trim:true, default:''},
   dimensions: {type:String, trim:true, lowercase:true, default:''},
   description: {type:String, trim:true, lowercase:true, default:''},
   price1: {type:Number, required:true, default:40},

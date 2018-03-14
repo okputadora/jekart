@@ -15,8 +15,9 @@ module.exports = {
     })
   },
   getByParam: function(param){
+    console.log(param)
     return new Promise(function(resolve, reject){
-      Prints.find(param, null, function(err, item) {
+      Prints.find(param, function(err, item) {
         if (err){
           reject(err)
           return

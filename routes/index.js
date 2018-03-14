@@ -33,9 +33,10 @@ router.get('/', function(req, res, next) {
 router.get('/:page', function(req, res, next){
   var page = req.params.page
   console.log(page)
+  // list of STATIC pages, dynamic pages have their own routes below
   var pages = ['statement', 'galleries', 'process', 'events',
       'upcoming-events', 'shop', 'past-events', 'contact', 'confirmation',
-      'cart', 'checkout', 'shop-item', 'admin']
+      'cart', 'checkout', 'admin']
   if (pages.indexOf(page) == -1){
     console.log("ERRRRROR ")
     res.render('error', {galleries: galleries})
@@ -100,17 +101,26 @@ router.get('/image/:name', function(req, res, next){
 })
 
 router.get('/shop-item/:item', function(req,res,next){
-  var name = {name: req.params.item}
+  var name = {name: req.params.item.trim()}
   controller = controllers['prints']
   controller.getByParam(name)
   .then(function(print){
+    console.log(print)
+    print = print[0]
+    var images = [print.image1]
+    if (print.image2 != ""){
+      image.push(print.image2)
+    }
     res.render('shop-item', {
       name: print.name,
-      image1: print.image1,
-      image2: print.image2,
+      images: images,
       description: print.description,
       dimensions: print.dimensions,
-      price: price
+      price1: print.price1,
+      price2: print.price2,
+      price3: print.price3,
+      framedPrice: (print.price+50),
+      galleries: galleries,
     })
   })
   .catch(function(error){
