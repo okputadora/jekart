@@ -13,24 +13,20 @@
 			<div id="" class='custom-page-banner'style="position: fixed; width: 100%;">
 				<div class="container clearfix">
 					<div style="padding-left: 10px;"class="menu-title"><a href="/shop">shop</a>
-						<img style="margin:5px;"src="/images/icons/submenu.png" /><span>{{name}}</span></div>
-					 </div>
+						<img style="margin:5px;"src="/images/icons/submenu.png" /><span>{{name}}</span>
+					</div>
+					<a href="/cart"><i class="icon-shopping-cart right custom-cart"></i></a>
+				 </div>
 				</div>
 			</div>
 		</div>
 
     <section id="content" style="background:#f9f9f9">
-
       <div class="content-wrap">
-
         <div class="container clearfix">
-
           <div class="single-product">
-
             <div class="product">
-
               <div class="col_two_fifth">
-
                 <!-- Product Single - Gallery
                 ============================================= -->
                 <div class="product-image">
@@ -44,46 +40,36 @@
                     </div>
                   </div>
                 </div><!-- Product Single - Gallery End -->
-
               </div>
-
               <div class="col_two_fifth product-desc">
-
                 <!-- Product Single - Price
                 ============================================= -->
 								<h2>{{name}}</h2>
                 <div class="product-price"><ins style="color: black">${{price1}}</ins></div><!-- Product Single - Price End -->
-
-
-
                 <div class="clear"></div>
                 <div class="line"></div>
 
                 <!-- Product Single - Quantity & Cart Button
                 ============================================= -->
-                <form class="cart nobottommargin clearfix" method="post" enctype='multipart/form-data'>
+                <form class="nobottommargin clearfix">
                   <div class="quantity clearfix">
-                    <input type="button" value="-" class="minus">
-                    <input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="3" />
-                    <input type="button" value="+" class="plus">
+                    <input id="removeItem" type="button" value="-" class="minus">
+                    <input id="itemCount" type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="3" />
+                    <input id="addItem"type="button" value="+" class="plus">
                   </div>
 									<div class="quantity clearfix">
 										<h4>Framed (+$50) <input type="checkbox" class="inline-checkbox" style="height:15px" /></h4>
-
 									</div>
-                  <button type="submit" class="button nomargin" style="background-color: black">Add to cart</button>
-                </form><!-- Product Single - Quantity & Cart Button End -->
-
+                  <button id="shop-item-cart" class="button nomargin" style="background-color: black">Add to cart</button>
+                </form>
                 <div class="clear"></div>
                 <div class="line"></div>
-
                 <ul class="iconlist">
                   <li><i class="icon-caret-right"></i>{{description}}</li>
                   <li><i class="icon-caret-right"></i>{{dimensions}} inches</li>
 									<li><i class="icon-caret-right"></i>2 for ${{price2}}(ea.)</li>
 									<li><i class="icon-caret-right"></i>3 for ${{price3}}(ea.)</li>
                 </ul><!-- Product Single - Short Description End -->
-
               </div>
               <div class="col_one_fifth col_last">
                 <div class="divider divider-center"><i class="icon-circle-blank"></i></div>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  // shop main page
   $("#shop").on("click", ".add-to-cart", function(){
     var id = this.id
     if (sessionStorage.cart){
@@ -27,5 +27,30 @@ $(document).ready(function(){
     }
     sessionStorage.cart = id
     console.log(sessionStorage)
+  })
+
+  // individual item
+  $("#addItem").on("click", function(){
+    var value = $("#itemCount").val()
+    if (value < 3)
+    value++
+    $("#itemCount").val(value)
+  })
+  $("#removeItem").on("click", function(){
+    var value = $("#itemCount").val()
+    if (value > 1){
+      value--
+    }
+    $("#itemCount").val(value)
+  })
+  $("#shop-item-cart").on("click", function(e){
+    e.preventDefault()
+    var value = $("#itemCount").val()
+    if (value > 1){
+      for (i = 1; i <= value; i++){
+
+      }
+    }
+
   })
 })
