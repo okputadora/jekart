@@ -109,8 +109,9 @@ router.get('/shop-item/:item', function(req,res,next){
     print = print[0]
     var images = [print.image1]
     if (print.image2 != ""){
-      image.push(print.image2)
+      images.push(print.image2)
     }
+    console.log("OK...trying to render")
     res.render('shop-item', {
       name: print.name,
       images: images,
@@ -121,6 +122,7 @@ router.get('/shop-item/:item', function(req,res,next){
       price3: print.price3,
       framedPrice: (print.price+50),
       galleries: galleries,
+      id: print._id
     })
   })
   .catch(function(error){

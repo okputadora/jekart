@@ -13,7 +13,8 @@ gulp.task('build', function(){
       './public/js/jquery.js',
       './public/js/plugins.js',
       './public/js/functions.js',
-      './public/js/custom.js'
+      './public/js/slideshow.js',
+      './public/js/shop.js'
     ]
   )
   .pipe(gp_concat('gulp-concat.js'))

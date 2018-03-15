@@ -4333,15 +4333,7 @@ var SEMICOLON = SEMICOLON || {};
 	$window.on( 'resize', SEMICOLON.documentOnResize.init );
 
 })(jQuery);
-
-  $(".center-icon").on("click", function(){
-    $(".details").css('display', "block")
-  })
-
-  $("#slideshow > div:gt(0)").hide();
-
   setInterval(function() {
-    console.log("slideshow working")
     $('#slideshow > div:first')
       .fadeOut(1000)
       .next()
@@ -4349,3 +4341,20 @@ var SEMICOLON = SEMICOLON || {};
       .end()
       .appendTo('#slideshow');
   }, 4000)
+
+$(document).ready(function(){
+  if (sessionStorage.cart){
+    console.log(sessionStorage)
+  }
+  else{
+    var cart = []
+    sessionStorage.cart = cart
+    console.log(sessionStorage)
+  }
+
+  $("#shop").on("click", ".add-to-cart", function(){
+    cart.push(this.id)
+    sessionStorage.cart = cart
+    console.log(sessionStorage)
+  })
+})

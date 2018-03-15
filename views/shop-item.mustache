@@ -12,12 +12,14 @@
 		<div id="page-menu" class="no-sticky" style="background: #1b1b1b">
 			<div id="" class='custom-page-banner'style="position: fixed; width: 100%;">
 				<div class="container clearfix">
-					<div style="padding-left: 10px;"class="menu-title"><span>shop</span></div>
+					<div style="padding-left: 10px;"class="menu-title"><a href="/shop">shop</a>
+						<img style="margin:5px;"src="/images/icons/submenu.png" /><span>{{name}}</span></div>
+					 </div>
 				</div>
 			</div>
 		</div>
 
-    <section id="content">
+    <section id="content" style="background:#f9f9f9">
 
       <div class="content-wrap">
 
@@ -92,7 +94,6 @@
                   <h3>Payment Options</h3>
                   <p class="notopmargin">We accept Visa, MasterCard and American Express.</p>
                 </div>
-
                 <div class="feature-box fbox-plain fbox-dark fbox-small">
                   <div class="fbox-icon">
                     <i class="icon-truck2"></i>
@@ -102,7 +103,6 @@
 										Standard shipping rates apply for framed prints
 									</p>
                 </div>
-
                 <div class="feature-box fbox-plain fbox-dark fbox-small">
                   <div class="fbox-icon">
                     <i class="icon-money"></i>
@@ -110,21 +110,13 @@
                   <h3>Discounts</h3>
                   <p class="notopmargin">$5 discount for local pickup</p>
                 </div>
-
               </div>
-
-
             </div>
-
           </div>
-
-
         </div>
-
       </div>
 
     </section><!-- #content end -->
-
     {{> footer }}
 	</div><!-- #wrapper end -->
 
@@ -132,10 +124,7 @@
   	============================================= -->
   	<script src="/js/jquery.js"></script>
   	<script src="/js/plugins.js"></script>
-
-  	<!-- Footer Scripts
-  	============================================= -->
   	<script src="/js/functions.js"></script>
-  	<!-- <script src='js/navTransition.js'></script> -->
+		<script src='/js/shop.js'></script>
   </body>
   </html>

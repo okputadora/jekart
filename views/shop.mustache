@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-    <section id="content">
+    <section id="content" style="background:#f9f9f9">
 
 			<div class="content-wrap">
 
@@ -31,10 +31,8 @@
 						<div class="product clearfix">
 							<div class="product-image">
 								<a href="/shop-item/{{name}}"><img src="/art_imgs/prints/{{image1}}" alt="{{name}}"></a>
-								<!-- <a href="/shop-single"><img src="" alt="{{name}}"></a> -->
 								<div class="product-overlay">
-									<a href="/shop-item/{{name}}" class="add-to-cart" style="width:100%"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-									<!-- <a href="include/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick View</span></a> -->
+									<a id={{id}} class="add-to-cart" style="width:100%"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
 								</div>
 							</div>
 							<div class="product-desc text-center" style="padding-top: 0">
@@ -53,12 +51,12 @@
 
   	<!-- External JavaScripts
   	============================================= -->
-  	<script src="js/jquery.js"></script>
-  	<script src="js/plugins.js"></script>
+  	<script src="/js/jquery.js"></script>
+  	<script src="/js/plugins.js"></script>
 
   	<!-- Footer Scripts
   	============================================= -->
-  	<script src="js/functions.js"></script>
-  	<!-- <script src='js/navTransition.js'></script> -->
+  	<script src="/js/functions.js"></script>
+		<script src="/js/shop.js"></script>
   </body>
   </html>
