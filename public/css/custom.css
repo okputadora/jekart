@@ -251,11 +251,59 @@ a {
   background-color: black!important;
 }
 
-.custom-cart{
-  color: white;
-  font-size: 20px !important;
+.add-to-cart{
+  cursor: pointer
 }
 
+.custom-cart{
+  color: white;
+  font-size: 30px !important;
+}
+
+.custom-shadow{
+  /* border: 1px solid #999; */
+  box-shadow: 0px 2px 3px #333
+}
+
+input[type=checkbox]{
+  visibility: hidden
+}
+
+.custom-checkbox{
+	width: 25px;
+	height: 25px;
+	background: #ddd;
+	margin: 20px 90px;
+	border-radius: 100%;
+	position: relative;
+	box-shadow: 0px 1px 3px #333;
+}
+
+.custom-checkbox label {
+	display: block;
+	width: 21px;
+	height: 21px;
+	border-radius: 100px;
+
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	z-index: 1;
+
+	background: #efefef;
+	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.custom-checkbox input[type=checkbox]:checked + label {
+	background: #333;
+}
+
+.framed{
+  font-size: 19px;
+  margin-left: -75px
+}
 /* ADMIN PAGE */
 .adminTable{
   padding: 0!important;
