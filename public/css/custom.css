@@ -255,6 +255,10 @@ a {
   cursor: pointer
 }
 
+.add-to-cart:hover{
+  color: white !important;
+}
+
 .custom-cart{
   color: white;
   font-size: 30px !important;
